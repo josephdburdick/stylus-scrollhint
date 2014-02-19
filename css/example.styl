@@ -1,26 +1,21 @@
 body
   background: #ccc;
 
-
+$mouse-btn-color        = green
+$mouse-container-width  = 5rem
+$mouse-animation-speed  = 2s
+$mouse-container-height = $mouse-container-width * 1.65
+$mouse-radius           = 999px
 
 .mouse-container
-
-
-  $w     = 5rem
-  $speed = 2s
+  position: absolute
+  width   : $mouse-container-width
+  height  : $mouse-container-height
   bottom : 20px
   right  : 20px
-
-
-  $h      = $w * 1.65
-  $radius = 999px
-  position: absolute
-  width   : $w
-  height  : $h
-
   .mouse
     position     : relative
-    border-radius: $radius
+    border-radius: $mouse-radius
     background   : #fff
     width        : 98%
     height       : 98%
@@ -28,58 +23,58 @@ body
     box-shadow   : 0 0 2px 0px rgba(0,0,0,.25)
     text-align   : center      
     .button
-      $w = 10%
+      $mouse-container-width = 10%
       display      : inline-block
       position     : relative
       top          : 15%
-      width        : $w
+      width        : $mouse-container-width
       padding      : 10% 0
-      border-radius: $radius
+      border-radius: $mouse-radius
       box-shadow   : inset 0 0 .5em rgba(0,0,0,.5), 0 .25em .25em #ccc
-      -webkit-animation: pulse $speed infinite;
-      -o-animation     : pulse $speed infinite;
-      -moz-animation   : pulse $speed infinite;
-      animation        : pulse $speed infinite;
+      -webkit-animation: pulse $mouse-animation-speed infinite;
+      -o-animation     : pulse $mouse-animation-speed infinite;
+      -moz-animation   : pulse $mouse-animation-speed infinite;
+      animation        : pulse $mouse-animation-speed infinite;
 
 
 @-webkit-keyframes pulse 
   0%    
     background: #ccc
-    box-shadow: 0 0 1em rgba(255,0,0,0)
+    box-shadow: 0 0 1em rgba($mouse-btn-color,0)
   50%   
-    background: #cc0000
-    box-shadow: 0 0 1em rgba(255,0,0,1)
+    background: $mouse-btn-color
+    box-shadow: 0 0 1em rgba($mouse-btn-color,1)
   100%  
     background: #ccc
-    box-shadow: 0 0 1em rgba(255,0,0,0)
+    box-shadow: 0 0 1em rgba($mouse-btn-color,0)
 @-moz-keyframes pulse
   0%    
     background: #ccc 
-    box-shadow: 0 0 1em rgba(255,0,0,0)
+    box-shadow: 0 0 1em rgba($mouse-btn-color,0)
   50%   
-    background: #cc0000 
-    box-shadow: 0 0 1em rgba(255,0,0,1)
+    background: $mouse-btn-color 
+    box-shadow: 0 0 1em rgba($mouse-btn-color,1)
   100%  
     background: #ccc
-    box-shadow: 0 0 1em rgba(255,0,0,0)
+    box-shadow: 0 0 1em rgba($mouse-btn-color,0)
 @-o-keyframes pulse 
   0%    
     background: #ccc
-    box-shadow: 0 0 1em rgba(255,0,0,0)
+    box-shadow: 0 0 1em rgba($mouse-btn-color,0)
   50%   
-    background: #cc0000
-    box-shadow: 0 0 1em rgba(255,0,0,1)
+    background: $mouse-btn-color
+    box-shadow: 0 0 1em rgba($mouse-btn-color,1)
   100%  
     background: #ccc
-    box-shadow: 0 0 1em rgba(255,0,0,0)
+    box-shadow: 0 0 1em rgba($mouse-btn-color,0)
 @keyframes pulse 
   0%    
     background: #ccc
-    box-shadow: 0 0 1em rgba(255,0,0,0)
+    box-shadow: 0 0 1em rgba($mouse-btn-color,0)
   50%   
-    background: #cc0000
-    box-shadow: 0 0 1em rgba(255,0,0,1)
+    background: $mouse-btn-color
+    box-shadow: 0 0 1em rgba($mouse-btn-color,1)
   100%  
     background: #ccc
-    box-shadow: 0 0 1em rgba(255,0,0,0)
+    box-shadow: 0 0 1em rgba($mouse-btn-color,0)
   
